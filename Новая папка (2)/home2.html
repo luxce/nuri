@@ -1,0 +1,296 @@
+<html><head>
+  <title>Интернет-магазин музыкальных товаров</title>
+</head>
+<body>
+  <div>
+    <header>
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+  <style>
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+
+section {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+    .back{
+      background-color: #40e0d0;
+    }
+    .card{
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+   background-color: #FFDEAD;
+   }
+   .card:hover{
+    background-color: rgba(0.5, 0.5, 0, 0.4);
+   }
+   .card img{
+    border-radius: 15px;
+    width: 60%;
+    margin:auto ;
+   }
+   .img{
+      border-radius: 20%;
+      margin-left: -50px;     
+     }
+    .color{
+    color: #3CB371;
+    background-color: #ff7f50;
+    }
+    .imgu {
+      width: 200px;
+      height: 200px;
+    }
+    .navbar-nav{
+      margin-left: 60px;
+    }
+    .bt{
+      margin-left: -200px;
+    }
+    .dtr{
+      color: darkred;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand p-0" href="home.html"> 
+        <img class="img" src="logo.png" height="85">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.html">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dos.html">Доставка и оплата</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cont.html">Контакты</a>
+        </li>
+         <form action="/search" method="get" style="display: flex; justify-content: flex-end; align-items: center; margin-left: 214px;">
+    <div style="margin-right: 10px;">
+      <input class="form-control" type="text" id="searchInput" name="query" placeholder="Введите запрос">
+    </div>
+    <button class="btn btn-outline-light" onclick="search()" type="button">Поиск</button>
+  </form>
+        </ul>
+      </div>
+  
+
+  <script>
+    function search() {
+      var searchText = document.getElementById('searchInput').value;
+      var linkElements = document.getElementsByTagName('h4');
+
+      for (var i = 0; i < linkElements.length; i++) {
+        var element = linkElements[i];
+
+        if (element.innerText.includes(searchText)) {
+          element.classList.add('highlight');
+        } else {
+          element.classList.remove('highlight');
+        }
+      }
+    }
+  </script>
+     <a class="btn btn-outline-light" href="index.html" data-config-id="auto-txt-5-2" data-path="0.0.0.2.0">Регистрация</a>
+    </div>
+    <a href="homekz.html">
+        <img style="height: 25px;border-radius: 30%;margin-left: -50px; margin-top: -27px;" src="flg.jpg" alt="Казахский" title="Казахский" data-lang-name="lang-name-kz">
+    </a>
+    <br>
+    <a href="home.html">
+        <img style="height: 25px;border-radius: 30%;margin-left: -50px; margin-top: 27px;" src="russ.jpg" alt="Русский" title="Русский" data-lang-name="lang-name-kz">
+    </a>
+
+</nav>
+
+</header></div>
+  
+
+  <section class="back" id="content">
+    <div id="cart-container"></div>
+   <div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">  
+    <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="bongo.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Бонго </h4>
+        <h5 class="dtr">80000тг</h5>
+
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div>
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="st.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Cатар </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="nai.jpg" alt="ravap">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Най </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="bala.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Балалайка </h4>
+        <h5 class="dtr">80000тг</h5>
+
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div>
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="kar.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Карнай </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="dap.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Дап </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="fogot.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Фагот </h4>
+        <h5 class="dtr">80000тг</h5>
+
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div>
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="chan.jpg" alt="ravap">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Чаң </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="saz.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Саз </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+    <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="jetgen.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Жетіген </h4>
+        <h5 class="dtr">80000тг</h5>
+
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div>
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="git.jpg" alt="dutar">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Гитара </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+     <div class="col">
+      <div class="card">
+        <div class="du">
+       <img class="imgu" src="pian.jpg" alt="ravap">
+       </div>
+       <div class="card-body">
+        <h4 class="card-title"> Пионино </h4>
+        <h5 class="dtr">80000тг</h5>
+        <a href="dos.html" onclick="addToCart(123)" class="btn btn-success">Оформить Заказ</a>
+       </div>
+      </div>
+    </div> 
+  
+  </div>
+</div>
+<h3 style="text-align: center;"><a href="home.html">1  </a><a href="home2.html">  2</a></h3>
+  </section>
+
+  <footer>
+    <p>© 2023 Музыкальный магазин. Все права защищены.</p>
+  </footer>
+
+
+</body></html>
